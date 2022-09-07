@@ -1,0 +1,81 @@
+/* br {
+    font-size: 2vw;
+} */
+
+#graph {
+    margin-top: 2.45%;
+    position: relative;   
+    height: 35vw;
+}
+#legend{
+  position: absolute;
+}
+#legend_edge{
+  position: relative;
+  float: right;
+}
+#demo_edge{
+  float: right;
+  position: relative;
+}
+.legend .skyblue {background-color: aqua}
+.legend .violet{background-color: darkblue}
+.legend .blue{background-color: #2C9AD1}
+.legend .grey_edge{    
+    background-color: #808080;
+    border-radius: 0%;
+    width: 3.2vw;
+    margin-top: 2.8%;
+    height: 0.35vw;
+    border: 0vw solid grey;
+}
+.legend .black_edge{    
+    background-color: black;
+    border-radius: 0%;
+    width: 3.2vw;
+    margin-top: 2.7%;
+    height: 0.35vw;
+    border: 0vw solid black;
+}
+#comments {
+    position: relative;
+    margin-top:0.6vw;
+    left: 35%;
+    height: 6vh;
+}
+#comments-demo {
+    position: relative;
+    margin-top:0.6vw;
+    left: 35%;
+    height: 20vh;
+}
+#comments_que {
+    position: relative;
+    margin-top:10vw;
+    left: 35%;
+    height: 6vh;
+}
+.buttons_practice{
+  margin-top:10%;
+}
+.buttons {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position:relative;
+  overflow: auto;
+  z-index: 1;}
+.buttons button{
+  z-index: 1;
+}
+#ranger {
+  margin-top: 1.5%;
+  position: relative;
+  /* font-size: 1.7vw; */
+  width:93%;
+  z-index: 1;
+  margin-left: 20%;
+}
+.slider_input{
+  width:10%;
+}
