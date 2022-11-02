@@ -14,69 +14,62 @@
 </head>
 
 <body>
-  <!-- <div class="v-collapsible-instruction-container v-instruction-container">
-      <div class="v-collapsible is-size-5">Instructions</div>
-      <button class="collapsible">Instructions</button>
-      <div class="content">
-        <ul>
-          <li>Click on the graph to enable the border.</li>
-          <li>Click on the node which you want to select as source node of the DFS demo.</li>
-          <li>You can click on <b>Pause</b> or <b>Play</b> to do so respectively and adjust speed using the slider.</li>
-          <li>Click on <b>Next</b> to move a step forward.</li>
-          <li>Click on <b>New Graph</b> to start over with a new graph.</li>
-          <li>Click on <b>Reset</b> to start over with the same graph.</li>
-          <li>Zoom or Adjust graph by dragging nodes according to your convenience.</li>  
-        </ul>
-      </div>
-    </div>
-      -->
 
-  <div class="container">
+  <div class="container" style="margin-top:1%;">
     <div class="columns is-centered">
       <div class="column">
-        <div class="v-collapsible-instruction-container v-instruction-container">
-          <div class="v-collapsible is-size-5">Instructions</div>
+        <div class="v-instruction-container">
+          <div id="instruction-title" class="v-collapsible is-size-5">Instructions</div>
           <div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
             <ul style="list-style: disc;">
-              <li>Click on the graph to enable the border.</li>
-              <li>Click on the node which you want to select as source node of the DFS demo.</li>
-              <li>You can click on <b>Pause</b> or <b>Play</b> to do so respectively and adjust speed using the slider.
+              <li>Select the speed through slider</li>
+              <li>Press start to see the simulation
               </li>
-              <li>Click on <b>Next</b> to move a step forward.</li>
-              <li>Click on <b>New Graph</b> to start over with a new graph.</li>
-              <li>Click on <b>Reset</b> to start over with the same graph.</li>
-              <li>Zoom or Adjust graph by dragging nodes according to your convenience.</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <center>
-    <div id="graph"></div>
-  </center>
-
-
-  <center>
-    <div>
-      <p id="ranger">
-        Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500"
-          onclick="change_interval();" onchange="change_interval();"> Max.Speed
-      </p>
+  <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start">
+    <div class="column is-10-desktop is-12-tablet is-12-mobile" id="graphdemo"></div>
+    <div class="column is-2-desktop is-12-tablet is-12-mobile">
+      <div class="v-datalist-container components-list" style="margin-top:5%;">
+        <div class="v-datalist-title">Observations</div>
+        <div class="v-datalist-row">
+          <div id="observations">
+            <p id="ins">First player is X <b>(maximizer)</b>. <br>Tic Tac Toe terminal states have been mapped to a
+              graph such that if X
+              wins, the
+              state is <b>(10-depth)</b> else <b>(depth-10)</b></p>
+          </div>
+        </div>
+      </div>
     </div>
-  </center>
-
-  <div id="comments-demo" class="comment-box">
-    <b>Observations:</b><br>
-    <p id="ins"> </p>
   </div>
 
-  <div class="buttons">
-    <input type="button" value="Reset" class="v-button" id="reset">
-    <input type="button" value="New graph" class="v-button" id="New_graph">
-    <input type="button" value="Pause" class="v-button" id="pause">
-    <input type="button" value="Start" class="v-button" id="start">
+
+  <div class="container">
+
+    <center>
+      <div>
+        <p id="ranger">
+          Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500"
+            onclick="change_interval();" onchange="change_interval();"> Max.Speed
+        </p>
+      </div>
+    </center>
+
+    <center>
+      <div class="v-datalist-row">
+        <input type="button" value="Reset" class="v-button" id="New_graph">
+        <input type="button" value="Start" class="v-button" id="start">
+        <input type="button" value="Pause" class="v-button" id="pause">
+      </div>
+    </center>
   </div>
+
+
 
   <script src="static/libs/vis.min.js"></script>
   <script src="js/Algo.js"></script>
