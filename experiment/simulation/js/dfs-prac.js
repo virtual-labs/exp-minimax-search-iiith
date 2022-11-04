@@ -262,10 +262,7 @@ function declare_graph(isRandom = 0, refresh = 1) {
         console.log(params);
         if (params['nodes'].length > 0 && dfs_prac.inputWait == 1 && params['nodes']['0']) {
             var selectedNode = params['nodes']['0'];
-            console.log("----------")
-            console.log(g.nextNodeMinimax[selectedNode - 1]);
-            console.log(dfs_prac.inpNodePossibleChild);
-            if (g.nodesVal[selectedNode - 1] == dfs_prac.inpNode) {
+            if (g.nodesVal[selectedNode - 1] == dfs_prac.inpNode && g.nextNodeMinimax[selectedNode] != dfs_prac.inpNodePossibleChild) {
                 if (dfs_prac.inpType == "min") {
                     dfs_prac.recentlySelectedNode = selectedNode;
                     if (dfs_prac.prevSelected != -1000) {
@@ -585,6 +582,7 @@ function clicking() {
         document.getElementById("pause").disabled = true;
         var tempNode = dfs_prac.src;
         var tempEdgeId;
+        document.getElementById("ins").innerHTML = "Green arrows highlight the decision taken in each turn";
         while (tempNode != -10000) {
             for (var i = 0; i < g.edges[tempNode].length; i++) {
                 if (g.edges[tempNode][i].node == dfs_prac.nextNodeMinimax[tempNode]) {
