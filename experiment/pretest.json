@@ -8,7 +8,8 @@
         "b": "No"
       },
       "explanations": {
-        "a": "When multiple minimum/maximum nodes are present then we can have multiple paths as we can chose any of the those"
+        "a": "When multiple minimum/maximum nodes are present then we can have multiple paths as we can chose any of the those",
+        "b": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -21,7 +22,9 @@
         "c": "None of these"
       },
       "explanations": {
-        "a": "Since we have to build bottom up so we perform Depth First Traversal"
+        "a": "Since we have to build bottom up so we perform Depth First Traversal",
+        "b": "",
+        "c": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -35,6 +38,9 @@
         "d": "All of these"
       },
       "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
         "d": "We can use minimax algorithm in all of these"
       },
       "correctAnswer": "d",
