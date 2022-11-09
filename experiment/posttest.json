@@ -12,6 +12,8 @@
       "explanations": {
         "a": "There can be multiple paths",
         "b": "It can take maximum time",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -27,7 +29,8 @@
       "explanations": {
         "a": "",
         "b": "",
-        "c": ""
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "d",
       "difficulty": "intermediate"
