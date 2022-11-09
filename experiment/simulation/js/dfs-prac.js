@@ -582,7 +582,7 @@ function clicking() {
         document.getElementById("pause").disabled = true;
         var tempNode = dfs_prac.src;
         var tempEdgeId;
-        document.getElementById("ins").innerHTML = "Green arrows highlight the decision taken in each turn";
+        document.getElementById("ins").innerHTML = "<b>Green arrows highlight the decision taken in each turn</b>";
         while (tempNode != -10000) {
             for (var i = 0; i < g.edges[tempNode].length; i++) {
                 if (g.edges[tempNode][i].node == dfs_prac.nextNodeMinimax[tempNode]) {
@@ -622,6 +622,8 @@ function reset() {
     document.getElementById("pause").disabled = true;
     document.getElementById("New_graph").disabled = true;
     document.getElementById("pause").value = "Pause";
+    document.getElementById("ins").innerHTML = "";
+    document.getElementById("inprequired").innerHTML = "";
 }
 
 function start() {
@@ -713,6 +715,8 @@ function change_player() {
     document.getElementById("start").disabled = false;
     document.getElementById("pause").disabled = true;
     document.getElementById("New_graph").disabled = true;
+    document.getElementById("ins").innerHTML = "";
+    document.getElementById("inprequired").innerHTML = "";
 }
 
 function change_graph() {
@@ -737,6 +741,8 @@ function change_graph() {
     document.getElementById("start").disabled = false;
     document.getElementById("pause").disabled = true;
     document.getElementById("New_graph").disabled = true;
+    document.getElementById("ins").innerHTML = "";
+    document.getElementById("inprequired").innerHTML = "";
 }
 
 function random_graph() {
@@ -762,6 +768,8 @@ function random_graph() {
     document.getElementById("start").disabled = false;
     document.getElementById("pause").disabled = true;
     document.getElementById("New_graph").disabled = true;
+    document.getElementById("ins").innerHTML = "";
+    document.getElementById("inprequired").innerHTML = "";
 }
 
 function random_graph_values() {
@@ -784,6 +792,8 @@ function random_graph_values() {
     document.getElementById("start").disabled = false;
     document.getElementById("pause").disabled = true;
     document.getElementById("New_graph").disabled = true;
+    document.getElementById("ins").innerHTML = "";
+    document.getElementById("inprequired").innerHTML = "";
 }
 
 
