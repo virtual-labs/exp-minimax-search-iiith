@@ -270,7 +270,7 @@ function declare_graph(isRandom = 0, refresh = 1) {
                     }
                     dfs_prac.prevSelected = selectedNode;
                     clickednodeMinSelect(selectedNode);
-                    document.getElementById("ins").innerHTML = "Correct node selected<br>Press Next to proceed";
+                    document.getElementById("ins").innerHTML = "<b>Correct node selected<br>Press Next to proceed</b>";
                     document.getElementById("inprequired").innerHTML = "";
                     document.getElementById("start").disabled = false;
                 }
@@ -281,7 +281,7 @@ function declare_graph(isRandom = 0, refresh = 1) {
                     }
                     dfs_prac.prevSelected = selectedNode;
                     clickednodeMaxSelect(selectedNode);
-                    document.getElementById("ins").innerHTML = "Correct node selected<br>Press Next to proceed";
+                    document.getElementById("ins").innerHTML = "<b>Correct node selected<br>Press Next to proceed</b>";
                     document.getElementById("inprequired").innerHTML = "";
                     document.getElementById("start").disabled = false;
                 }
@@ -294,7 +294,7 @@ function declare_graph(isRandom = 0, refresh = 1) {
                         clickednodeMinUnSelect(dfs_prac.prevSelected);
                     }
                     document.getElementById("start").disabled = true;
-                    document.getElementById("ins").innerHTML = "This is minimizer's turn<br>Select the minimum value node from the purple colored child nodes of the current parent node";
+                    document.getElementById("ins").innerHTML = "<b>This is minimizer's turn<br>Select the minimum value node from the purple colored child nodes of the current parent node</b>";
                     document.getElementById("inprequired").innerHTML = "Select Node !";
                 }
                 else {
@@ -304,7 +304,7 @@ function declare_graph(isRandom = 0, refresh = 1) {
                         clickednodeMaxUnSelect(dfs_prac.prevSelected);
                     }
                     document.getElementById("start").disabled = true;
-                    document.getElementById("ins").innerHTML = "This is maximizer's turn<br>Select the maximum value node from the red colored child nodes of the current parent node";
+                    document.getElementById("ins").innerHTML = "<b>This is maximizer's turn<br>Select the maximum value node from the red colored child nodes of the current parent node</b>";
                     document.getElementById("inprequired").innerHTML = "Select Node !";
                 }
             }
@@ -532,7 +532,7 @@ function clicking() {
                 dfs_prac.inpNodePossibleChild = dfs_prac.dfsres[dfs_prac.curPos + 1].curNode;
                 document.getElementById("start").disabled = true;
                 dfs_prac.inpType = "max";
-                document.getElementById("ins").innerHTML = "Select the correct node";
+                document.getElementById("ins").innerHTML = "<b>Select the correct node</b>";
                 document.getElementById("inprequired").innerHTML = "Select Node !";
                 document.getElementById("pause").disabled = true;
                 document.getElementById("New_graph").disabled = false;
@@ -549,7 +549,7 @@ function clicking() {
                 dfs_prac.inpNodePossibleChild = dfs_prac.dfsres[dfs_prac.curPos + 1].curNode;
                 document.getElementById("start").disabled = true;
                 dfs_prac.inpType = "min";
-                document.getElementById("ins").innerHTML = "Select the correct node";
+                document.getElementById("ins").innerHTML = "<b>Select the correct node</b>";
                 document.getElementById("inprequired").innerHTML = "Select Node !";
                 document.getElementById("pause").disabled = true;
                 document.getElementById("New_graph").disabled = false;
@@ -564,16 +564,16 @@ function clicking() {
             else if (dfs_prac.dfsres[dfs_prac.curPos].type == "nodeValDefineMax") {
                 dfs_prac.nextNodeMinimax[dfs_prac.dfsres[dfs_prac.curPos].curNode] = dfs_prac.recentlySelectedNode;
                 clickednodeLabelDef(dfs_prac.dfsres[dfs_prac.curPos].curNode, dfs_prac.dfsres[dfs_prac.curPos].nodeVal);
-                document.getElementById("ins").innerHTML = "Since it was maximizer's turn<br>" + dfs_prac.dfsres[dfs_prac.curPos].nodeVal + ", which is max of child node values is picked";
+                document.getElementById("ins").innerHTML = "<b>Since it was maximizer's turn<br>" + dfs_prac.dfsres[dfs_prac.curPos].nodeVal + ", which is max of child node values is picked</b>";
             }
             else if (dfs_prac.dfsres[dfs_prac.curPos].type == "nodeValDefineMin") {
                 dfs_prac.nextNodeMinimax[dfs_prac.dfsres[dfs_prac.curPos].curNode] = dfs_prac.recentlySelectedNode;
                 clickednodeLabelDef(dfs_prac.dfsres[dfs_prac.curPos].curNode, dfs_prac.dfsres[dfs_prac.curPos].nodeVal);
-                document.getElementById("ins").innerHTML = "Since it was minimizer's turn<br>" + dfs_prac.dfsres[dfs_prac.curPos].nodeVal + ", which is min of child node values is picked";
+                document.getElementById("ins").innerHTML = "<b>Since it was minimizer's turn<br>" + dfs_prac.dfsres[dfs_prac.curPos].nodeVal + ", which is min of child node values is picked</b>";
             }
             else if (dfs_prac.dfsres[dfs_prac.curPos].type == "finalEdgeDisp") {
                 clickededgeFinal(dfs_prac.dfsres[dfs_prac.curPos].edge_id);
-                document.getElementById("ins").innerHTML = "Green arrows highlight the decision taken in each turn";
+                document.getElementById("ins").innerHTML = "<b>Green arrows highlight the decision taken in each turn</b>";
             }
         }
         dfs_prac.curPos++;
@@ -627,9 +627,9 @@ function reset() {
 function start() {
     if (dfs_prac.start == 0) {
         if (dfs_prac.maximizer)
-            document.getElementById("ins").innerHTML = "Minimax algorithm started on source node<br>Maximizer will start with the first turn";
+            document.getElementById("ins").innerHTML = "<b>Minimax algorithm started on source node<br>Maximizer will start with the first turn</b>";
         else {
-            document.getElementById("ins").innerHTML = "Minimax algorithm started on source node<br>Minimizer will start with the first turn";
+            document.getElementById("ins").innerHTML = "<b>Minimax algorithm started on source node<br>Minimizer will start with the first turn</b>";
         }
         g.dfs(dfs_prac.src, dfs_prac.src, dfs_prac.maximizer, dfs_prac.src);
         dfs_prac.dfsres = g.dfsRes;
