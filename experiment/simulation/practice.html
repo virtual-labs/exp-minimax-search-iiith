@@ -38,7 +38,15 @@
     <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start">
         <div class="column is-9-desktop is-12-tablet is-12-mobile" id="graph"></div>
         <div class="column is-3-desktop is-12-tablet is-12-mobile">
-            <div class="v-datalist-container components-list">
+            <div class="v-datalist-container components-list" style="margin-top:5%;border-color: red;">
+                <div class="v-datalist-title">Observations</div>
+                <div class="v-datalist-row">
+                    <div id="observations">
+                        <p id="ins"> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="v-datalist-container components-list" style="margin-top:3%;">
                 <div class="v-datalist-title">Settings</div>
                 <div class="v-datalist-row">
                     <label for="first_player"><b>First Player : </b></label>
@@ -60,14 +68,6 @@
                     <input type="button" value="Random Graph" class="v-button" id="new_graph" style="margin-top:10%">
                     <input type="button" value="Random Values" class="v-button" id="rand_val" style="margin-top:10%">
 
-                </div>
-            </div>
-            <div class="v-datalist-container components-list" style="margin-top:5%;">
-                <div class="v-datalist-title">Observations</div>
-                <div class="v-datalist-row">
-                    <div id="observations">
-                        <p id="ins"> </p>
-                    </div>
                 </div>
             </div>
         </div>

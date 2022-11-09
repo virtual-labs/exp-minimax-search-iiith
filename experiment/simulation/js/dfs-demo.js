@@ -455,27 +455,32 @@ function clicking() {
             else if (dfs_demo.dfsres[dfs_demo.curPos].type == "nodeValDefineMax") {
                 clickednodeLabelDef(dfs_demo.dfsres[dfs_demo.curPos].curNode, dfs_demo.dfsres[dfs_demo.curPos].nodeVal);
                 clickednodeLabelDef(dfs_demo.dfsresTictac[dfs_demo.curPos].curNode, dfs_demo.dfsresTictac[dfs_demo.curPos].nodeVal);
-                document.getElementById("ins").innerHTML = "Since it was maximizer's turn<br>" + dfs_demo.dfsres[dfs_demo.curPos].nodeVal + ", which is max of child node values is picked";
+                document.getElementById("ins").innerHTML = "<b>Since it was maximizer's turn<br>" + dfs_demo.dfsres[dfs_demo.curPos].nodeVal + ", which is max of child node values is picked</b>";
             }
             else if (dfs_demo.dfsres[dfs_demo.curPos].type == "nodeValDefineMin") {
                 clickednodeLabelDef(dfs_demo.dfsres[dfs_demo.curPos].curNode, dfs_demo.dfsres[dfs_demo.curPos].nodeVal);
                 clickednodeLabelDef(dfs_demo.dfsresTictac[dfs_demo.curPos].curNode, dfs_demo.dfsresTictac[dfs_demo.curPos].nodeVal);
-                document.getElementById("ins").innerHTML = "Since it was minimizer's turn<br>" + dfs_demo.dfsres[dfs_demo.curPos].nodeVal + ", which is min of child node values is picked";
+                document.getElementById("ins").innerHTML = "<b>Since it was minimizer's turn<br>" + dfs_demo.dfsres[dfs_demo.curPos].nodeVal + ", which is min of child node values is picked</b>";
             }
             else if (dfs_demo.dfsres[dfs_demo.curPos].type == "finalEdgeDisp") {
                 clickededgeFinal(dfs_demo.dfsres[dfs_demo.curPos].edge_id);
                 clickededgeFinal(dfs_demo.dfsresTictac[dfs_demo.curPos].edge_id);
-                document.getElementById("ins").innerHTML = "Green arrows highlight the decision taken in each turn";
+                document.getElementById("ins").innerHTML = "<b>Green arrows highlight the decision taken in each turn</b>";
             }
         }
         dfs_demo.curPos++;
+    }
+    else{
+        document.getElementById("ins").innerHTML = "<b>Green arrows highlight the decision taken in each turn</b>";        
+        clickededgeFinal(12);
+        clickededgeFinal(1112);
     }
 }
 
 
 function start() {
     if (dfs_demo.start == 0) {
-        document.getElementById("ins").innerHTML = "Minimax demo started on source state";
+        document.getElementById("ins").innerHTML = "<b>Minimax demo started on source state</b>";
         gTicTac.dfs(1, 1, true, 1);
         dfs_demo.dfsresTictac = gTicTac.dfsRes;
         g.dfs(11, 11, true, 11);
