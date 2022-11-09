@@ -262,7 +262,16 @@ function declare_graph(isRandom = 0, refresh = 1) {
         console.log(params);
         if (params['nodes'].length > 0 && dfs_prac.inputWait == 1 && params['nodes']['0']) {
             var selectedNode = params['nodes']['0'];
-            if (g.nodesVal[selectedNode - 1] == dfs_prac.inpNode && g.nextNodeMinimax[selectedNode] != dfs_prac.inpNodePossibleChild) {
+            var canBeSelected=0;
+            console.log(dfs_prac.dfsres[dfs_prac.curPos-1]);
+            for (var ti = 0; ti < dfs_prac.dfsres[dfs_prac.curPos-1].childNodes.length; ti++) {
+                console.log(dfs_prac.dfsres[dfs_prac.curPos-1].childNodes[ti].node)
+                if(dfs_prac.dfsres[dfs_prac.curPos-1].childNodes[ti].node==selectedNode){
+                    canBeSelected=1;
+                    break;
+                }
+            }
+            if (canBeSelected && g.nodesVal[selectedNode - 1] == dfs_prac.inpNode && g.nextNodeMinimax[selectedNode] != dfs_prac.inpNodePossibleChild) {
                 if (dfs_prac.inpType == "min") {
                     dfs_prac.recentlySelectedNode = selectedNode;
                     if (dfs_prac.prevSelected != -1000) {
@@ -294,7 +303,7 @@ function declare_graph(isRandom = 0, refresh = 1) {
                         clickednodeMinUnSelect(dfs_prac.prevSelected);
                     }
                     document.getElementById("start").disabled = true;
-                    document.getElementById("ins").innerHTML = "<b>This is minimizer's turn<br>Select the minimum value node from the purple colored child nodes of the current parent node</b>";
+                    document.getElementById("ins").innerHTML = "<b>This is minimizer's turn<br>Select the minimum value node from the purple colored child nodes of the current grey colored parent node</b>";
                     document.getElementById("inprequired").innerHTML = "Select Node !";
                 }
                 else {
@@ -304,7 +313,7 @@ function declare_graph(isRandom = 0, refresh = 1) {
                         clickednodeMaxUnSelect(dfs_prac.prevSelected);
                     }
                     document.getElementById("start").disabled = true;
-                    document.getElementById("ins").innerHTML = "<b>This is maximizer's turn<br>Select the maximum value node from the red colored child nodes of the current parent node</b>";
+                    document.getElementById("ins").innerHTML = "<b>This is maximizer's turn<br>Select the maximum value node from the red colored child nodes of the current grey colored parent node</b>";
                     document.getElementById("inprequired").innerHTML = "Select Node !";
                 }
             }
