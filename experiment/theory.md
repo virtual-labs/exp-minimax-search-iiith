@@ -1,4 +1,3 @@
-### Link your theory in here
 ## Introduction
 
 Minimax algorithm is a game search algorithm, which is used to determine optimal move for each player while playing a strategy game. It can be used in a 2 player game where the players take chances in alternative fashion. In Minimax algorithm one player is a maximizer and other minimizer. Maximizer tries to get the highest score possible while the minimizer tries to do the opposite and get the lowest score possible. For applying Minimax algorithm we convert the game into a tree and label the terminal nodes. The tree basically denotes the move the player can take in his chance from the current state he is in.
