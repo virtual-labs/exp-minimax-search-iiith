@@ -6,7 +6,7 @@ Minimax algorithm is a game search algorithm, which is used to determine optimal
 
 We will take an example of Tic-Tac-Toe. Let the 2 players be cross (X) and nought (O). So here we can define cross as the maximizer and nought as the minimzer (can be defined otherwise as well). The aim is for cross to have the 3 X's in a straight line and prevent nought from having 3 O's in a straight line. It is exactly opposite for the nought. So basically, both players try to win by preventing other player to win the game. In these cases Minimax algorithm can be used. Let's see how we can define the Tic-Tac-Toe states to a tree. So, first we will create a tree of the Tic-Tac-Toe states until they converge by taking all possible moves from each state. Now we will label the terminal states with some numbers. If cross wins in the terminal state then we can have the state as 10 else if nought wins we can have it as -10 else 0. Now basically this implies that cross wants to maximize by getting a 10 whereas nought wants to minimize by getting -10. But, in this case when there can be 2 paths in a tree that can lead to a win for cross then any of the path can be chosen, although we want it to terminate as quickly as possible. So for this we use depth to mark terminal states. If cross wins then (10-depth) else if nought wins then (depth-10) else 0 (Note 10 is actually used because max depth is 9, when we start from no filled state). Using depth we will prefer the path where depth is less.
 
-[./images/tictactoe.png] TicTacToe
+![Tic Tac Toe](./images/tictactoe.png)
 
 ## Algorithm
 
