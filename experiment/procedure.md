@@ -1,4 +1,3 @@
-### Procedure
 ## Step 1:
 In practice section modify the tree, terminal values and the starting player
 ## Step 2:
