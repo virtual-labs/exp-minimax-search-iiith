@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "In Tic-Tac-Toe, if we don't use depth as parameter while mapping to graph, then which of the follwoing will be true?",
+      "question": "In Tic-Tac-Toe, if we don't use depth as parameter while mapping to graph, then which of the following will be true?",
       "answers": {
         "a": "There will be only 1 path",
         "b": "We will terminate quickly as compared to when we use depth",
@@ -50,7 +50,7 @@
         "d": "a"
       },
       "correctAnswer": "a",
-      "difficulty": "intermediate"
+      "difficulty": "beginner"
     },
     {
       "question": "What is the main advantage of using a Minimax tree in game theory?",
@@ -68,7 +68,8 @@
       },
       "correctAnswer": "a",
       "difficulty": "intermediate"
-    },{
+    },
+    {
       "question": "What is the time complexity of the Minimax algorithm for a complete tree where n is the number of moves?",
       "answers": {
         "a": "O(n)",
