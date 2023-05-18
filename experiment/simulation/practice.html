@@ -80,15 +80,6 @@
 
         <center>
             <div>
-                <p id="ranger">
-                    Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500"
-                        onclick="change_interval();" onchange="change_interval();"> Max.Speed
-                </p>
-            </div>
-        </center>
-
-        <center>
-            <div>
                 <p>
                     <b style="font-size:35px;color:red;" id="inprequired"></b>
                 </p>
@@ -96,14 +87,22 @@
             <!-- </div> -->
         </center>
 
-        <center>
-            <div class="v-datalist-row">
-                <input type="button" value="Reset" class="v-button" id="New_graph">
-                <input type="button" value="Start" class="v-button" id="start">
-                <input type="button" value="Pause" class="v-button" id="pause">
+    </div>
 
-            </div>
-        </center>
+    <div class="play-pause" style="padding-bottom: 5%; margin-top: 2%;">
+        <div class="button-layout">
+            <input type="button" value="Reset" class="v-button" id="New_graph">
+            <input type="button" value="Start" class="v-button" id="start">
+            <input type="button" value="Pause" class="v-button" id="pause">
+        </div>
+        <div style="margin-left: 5%;" class="slider-layout">
+            <p id="ranger">
+                Min.Speed
+                <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500"
+                    onclick="change_interval();" onchange="change_interval();" />
+                Max.Speed
+            </p>
+        </div>
     </div>
 
 
